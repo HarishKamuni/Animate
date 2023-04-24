@@ -43,6 +43,7 @@ const Navbar = () => {
     .mobile-navbar-btn[name="close-outline"]{
         display:none;
     }
+    
     @media (max-width: ${({theme})=>theme.media.mobile}){
         .mobile-navbar-btn{
             display: inline-block;
