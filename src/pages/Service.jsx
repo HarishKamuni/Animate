@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import {users} from "../DummyData";
 import styled from 'styled-components';
 import { Button } from '../Style/Button';
@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 const Service = () => {
   // console.log(users);
-  const [userData,setUserData] = useState([]);
+  // const [userData,setUserData] = useState([]);
   // console.log(userData)
   const Container = styled.section`
     padding:9rem 0;
@@ -86,19 +86,19 @@ const Service = () => {
   
   `;
 
-  useEffect(()=>{
-    const start = async()=>{
-       try {
-         await fetch("http://localhost:5500/api/users")
-         .then(res => res.json())
-         .then(data => setUserData(data.data))
+//   useEffect(()=>{
+//     const start = async()=>{
+//        try {
+//          await fetch("http://localhost:5500/api/users")
+//          .then(res => res.json())
+//          .then(data => setUserData(data.data))
          
-       } catch (error) {
-        console.log(error)
-       }
-    }
-    start()
-},[])
+//        } catch (error) {
+//         console.log(error)
+//        }
+//     }
+//     start()
+// },[])
   return (
     <>
     
@@ -108,7 +108,7 @@ const Service = () => {
         
       {
         // console.log(userData)
-        userData.map(items=>{
+        users.map(items=>{
           const {id,name,desc,photo} = items;
           return(
             <div key={id} className="card">
